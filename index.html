@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>startseite–ladinawasescha.ch</title>
+    <!-- Der Link zu deiner CSS-Datei, die für die Positionierung und den Stil
+         der Hintergrundelemente (Bilder und Hintergrund-Div) zuständig ist. -->
+    <link rel="stylesheet" href="style-startseite.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+</head>
+
+
+
+<body>
+    <div class="project-grid" id="headerGrid">
+        <!--class für grid -->
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--HEADER-->
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="project-grid__header01">
+            <div>Portfolio</div>
+        </div>
+
+        <div class="project-grid__header02">
+            <a class="smartphone" href="london.html">Projekte</a>
+            <div class="desktop">Projekte</div>
+        </div>
+
+        <div class="project-grid__header03">
+            <a href="ueber-mich.html">Über mich</a>
+        </div>
+
+    </div>
+
+    <div class="image-container">
+        <!-- Diese Bilder sind die Elemente, die durch die Löcher im Canvas sichtbar werden. -->
+        <!-- Sie müssen im HTML *unter* dem Canvas positioniert werden oder mit CSS
+         so angeordnet sein, dass sie sichtbar sind, wenn der Canvas transparent wird. -->
+        <a href="paris.html"><img class="paris" alt="paris" src="bilder/paris-offen.jpg"></img> </a>
+        <a href="london.html"><img class="london" alt="london" src="bilder/london.jpg"></img> </a>
+        <a href="stuehle-und-gestalter.html"><img class="layout1" alt="stuehle-gestalter"
+                src="bilder/layout1.jpg"></img> </a>
+        <a href="malen.html"><img class="malen" alt="malen" src="bilder/malen.jpg"></img></a>
+        <a href="illustration.html"><img class="illustration" alt="illustration" src="bilder/illustrator.jpg"></img></a>
+        <a href="font-design.html"><img class="font" alt="font" src="bilder/font.jpg"></img> </a>
+        <a href="corporate-design.html"><img class="corporate" alt="corporate" src="bilder/corporate.jpg"></img></a>
+        <a href="fotografie.html"> <img class="fotografik1" alt="fotografik" src="bilder/gipfeli-gf-farbig.jpg"></img>
+        </a>
+        <a href="fotografie.html"><img class="fotografik2" alt="fotografik" src="bilder/gipfeli-n-farbig.jpg"></img>
+        </a>
+        <a href="zeitung.html"><img class="zeitung" alt="zeitung" src="bilder/zeitung.jpg"></img></a>
+        <a href="zöliakie.html"><img class="blickwechsel" alt="blickwechsel" src="bilder/blickwechsel.jpg"></img></a>
+        <a href="musikplakat.html"><img class="musikplakat" alt="musikplakat" src="bilder/musikplakat.jpg"></img></a>
+    </div>
+
+    <!-- Das Canvas-Element. Es liegt über allen anderen Elementen (Bildern und Div). -->
+    <!-- Die JavaScript-Logik zeichnet eine schwarze Maske darauf und schneidet
+         mit 'destination-out' transparente Löcher hinein. -->
+    <canvas id="canvas"></canvas>
+
+
+</body>
+<!-- Das JavaScript-Skript wird am Ende des <body>-Tags geladen.
+       Dadurch wird sichergestellt, dass alle DOM-Elemente (wie das Canvas)
+       bereits existieren, wenn das Skript versucht, darauf zuzugreifen. -->
+<script src="script-startseite.js"> </script>
+
+</html>

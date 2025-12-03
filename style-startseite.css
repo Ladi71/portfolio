@@ -1,0 +1,282 @@
+/* =======================================
+   BASE STYLES
+======================================= */
+
+body {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  background-color: black;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none; /* Unterstreichung entfernen */
+  color: inherit; /* Farbe vom umgebenden Element übernehmen */
+}
+/* =======================================
+header
+======================================= */
+.project-grid__header01 {
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.8px;
+  display: block;
+  margin: 10px 0 24px 24px;
+}
+
+.project-grid__header02 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.8px;
+  display: block;
+  margin: 10px 0 24px 0;
+}
+
+.project-grid__header03 {
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 0.8px;
+  display: block;
+  margin: 10px 24px 24px 0;
+}
+
+/* =======================================
+       Grid
+  ========================================== */
+
+.project-grid {
+  display: grid; /* ähnlcih wie flex */
+  padding: 0 8px 8px 8px 8px; /* rand rundum, 1 Zahl = rundum, 4 Zahlen --> im uhrzeigersinn   ränder oben, R, unten, L */
+  gap: 4px; /* Steg zwischen spalten */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*1fr 1fr 1fr 1fr --> 4 Spalten --> immer 4 objekte in ""*/
+  z-index: 999;
+  position: relative;
+  /* WICHTIG: Auf VH (Viewport Height) umgestellt für Responsivität */
+  height: 5vh;
+}
+
+/* =======================================
+       Bilder freigestellt
+  ========================================== */
+body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+}
+/* header  ----------------------------------------------------------------------------------------------------------------------------------------------*/
+.image-container {
+  display: block;
+}
+
+/* Paris  ----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.paris {
+  position: absolute;
+  left: 3.87%;
+  top: 9.04%;
+  width: 23vw;
+  filter: grayscale(1);
+}
+.paris:hover {
+  filter: grayscale(0);
+}
+/* London  ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.london {
+  position: absolute;
+  left: 21.3%;
+  top: 40%;
+  width: 22vw;
+  filter: grayscale(1);
+}
+.london:hover {
+  filter: grayscale(0);
+}
+/* Layout 1 ----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.layout1 {
+  position: absolute;
+  left: 3.35%;
+  top: 43.9%;
+  width: 10vw;
+  filter: grayscale(1);
+}
+.layout1:hover {
+  filter: grayscale(0);
+}
+/* Malen  ----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.malen {
+  position: absolute;
+  left: 12.8%;
+  top: 70.7%;
+  width: 14vw;
+  filter: grayscale(1);
+}
+.malen:hover {
+  filter: grayscale(0);
+}
+/* illustration  --------------------------------------------------------------------------------------------------------------------------------------*/
+
+.illustration {
+  position: absolute;
+  left: 36.8%;
+  top: 74.6%;
+  width: 18vw;
+  filter: grayscale(1);
+}
+.illustration:hover {
+  filter: grayscale(0);
+}
+/* font  --------------------------------------------------------------------------------------------------------------------------------------*/
+
+.font {
+  position: absolute;
+  left: 52.8%;
+  top: 48.8%;
+  width: 16vw;
+  filter: grayscale(1);
+}
+.font:hover {
+  filter: grayscale(0);
+}
+/* corporate  --------------------------------------------------------------------------------------------------------------------------------------*/
+
+.corporate {
+  position: absolute;
+  left: 69%;
+  top: 72.4%;
+  width: 16vw;
+  filter: grayscale(1);
+}
+.corporate:hover {
+  filter: grayscale(0);
+}
+/* fotografik 1  --------------------------------------------------------------------------------------------------------------------*/
+
+.fotografik1 {
+  position: absolute;
+  left: 77.8%;
+  top: 41.9%;
+  width: 14vw;
+  filter: grayscale(1);
+}
+.fotografik1:hover {
+  filter: grayscale(0);
+}
+
+/* fotografik 2  ---------------------------------------------------------------------------------------------------------------------*/
+
+.fotografik2 {
+  position: absolute;
+  left: 84%;
+  top: 55.7%;
+  width: 12vw;
+  filter: grayscale(1);
+}
+.fotografik2:hover {
+  filter: grayscale(0);
+}
+
+/* zeitung  ---------------------------------------------------------------------------------------------------------------------*/
+
+.zeitung {
+  position: absolute;
+  left: 53%;
+  top: 16%;
+  width: 20vw;
+  filter: grayscale(1);
+}
+.zeitung:hover {
+  filter: grayscale(0);
+}
+/* blickwechsel  ---------------------------------------------------------------------------------------------------------------------*/
+
+.blickwechsel {
+  position: absolute;
+  left: 80.3%;
+  top: 9%;
+  width: 10vw;
+  filter: grayscale(1);
+}
+.blickwechsel:hover {
+  filter: grayscale(0);
+}
+/* musikplakat  ---------------------------------------------------------------------------------------------------------------------*/
+
+.musikplakat {
+  position: absolute;
+  left: 37.8%;
+  top: 7.7%;
+  width: 10vw;
+  filter: grayscale(1);
+}
+.musikplakat:hover {
+  filter: grayscale(0);
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Canvas with the black mask and holes */
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1; /* Das Canvas liegt über den Bildern */
+  pointer-events: none; /* Wichtig: Erlaubt Klicks auf die Bilder unter dem Canvas */
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media all and (max-width: 699px) {
+  /* Handy************************************************************************************************************** */
+  /* Handy */
+  .desktop {
+    display: none;
+  }
+  body {
+    font-size: 14px; /*Navigationselemente = 14px*/
+  }
+  .project-grid__header01 {
+    grid-column: auto / span 4;
+  }
+
+  .project-grid__header02 {
+    grid-column: 5 / span 4;
+  }
+
+  .project-grid__header03 {
+    grid-column: 9 / span 4;
+  }
+}
+
+@media all and (min-width: 700px) {
+  /* Desktop *****************************************************************************************************/
+  /* Desktop */
+  .smartphone {
+    display: none;
+  }
+  body {
+    font-size: 16px;
+  }
+  .project-grid__header01 {
+    grid-column: auto / span 4;
+  }
+
+  .project-grid__header02 {
+    grid-column: 5 / span 4;
+  }
+
+  .project-grid__header03 {
+    grid-column: 9 / span 4;
+  }
+}

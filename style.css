@@ -1,0 +1,710 @@
+/* =======================================
+   BASE STYLES
+======================================= */
+
+body {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  background-color: black;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none; /* Unterstreichung entfernen */
+  color: inherit; /* Farbe vom umgebenden Element übernehmen */
+}
+
+/* =======================================
+  header
+  ======================================= */
+.project-grid__header01 {
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.8px;
+  display: block;
+}
+
+.project-grid__header02 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.8px;
+  display: block;
+}
+
+.project-grid__header03 {
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 0.8px;
+  display: block;
+}
+.project-grid__title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  letter-spacing: 0.8px;
+}
+
+/*.project-grid__hero {}*/
+
+.project-grid__detail {
+  margin-bottom: 0px;
+}
+
+/* --------------------------------------
+     FIX: 1. Entfernt die feste Breitenangabe, da das Grid dies bereits regelt.
+     FIX: 2. Setzt max-width auf 100%, um Überlauf zu verhindern.
+  -------------------------------------- */
+.project-grid__animation {
+  max-width: 100%; /* Sorgt dafür, dass die Animation nicht über den zugewiesenen Grid-Bereich hinauswächst */
+}
+
+/* --------------------------------------
+       WICHTIGER ZUSATZ-FIX:
+       Stellt sicher, dass das interne Element der Animation (z.B. <video>, <canvas>, <iframe>)
+       sich auch an den Container anpasst.
+    -------------------------------------- */
+.project-grid__animation > * {
+  max-width: 100%;
+  height: auto; /* Wichtig, um das Seitenverhältnis zu erhalten */
+  display: block;
+}
+
+/* =======================================
+       Grid
+  ========================================== */
+
+.project-grid {
+  display: grid; /* ähnlcih wie flex */
+  padding: 0 8px 8px 8px 8px; /* rand rundum, 1 Zahl = rundum, 4 Zahlen --> im uhrzeigersinn   ränder oben, R, unten, L */
+  gap: 4px; /* Steg zwischen spalten */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*1fr 1fr 1fr 1fr --> 4 Spalten --> immer 4 objekte in ""*/
+}
+
+/* =======================================
+       HOME PAGE
+    ======================================= */
+
+.home-grid {
+  display: grid;
+  padding: 26px;
+}
+
+/* =======================================
+       Slider
+    ======================================= */
+/* Gib dem Swiper-Container eine Grösse */
+.swiper {
+  width: 100%;
+
+  /* border-radius: 8px;*/
+}
+
+/* * DAS IST DIE WICHTIGE LÖSUNG:
+   * Hier beheben wir das Abstand-Problem.
+  */
+.swiper-slide {
+  /* * 2. (SEHR WICHTIG für 'slidesPerView: "auto"')
+       * Setze die Breite auf 'auto', damit der Slide
+       * die Breite seines Inhalts (des Bildes) annimmt.
+      */
+  width: auto !important;
+}
+
+/* * Stil für die Bilder im Slider
+  */
+.swiper-slide img.slider {
+  height: 100%;
+
+  /* Breite automatisch anpassen, um das Seitenverhältnis zu wahren */
+  width: auto;
+}
+
+@media all and (max-width: 699px) {
+  /* Handy************************************************************************************************************** */
+  /* Handy */
+  /* Handy************************************************************************************************************** */
+
+  .desktop {
+    display: none;
+  }
+  .smartphone {
+    display: block;
+    width: 200px; /* oder 32px oder was du willst */
+    height: auto;
+  }
+
+  .project-grid__next {
+    /* grid-column: 9 / span 4; */
+    height: auto;
+    width: 5vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    right: 24px;
+  }
+
+  .project-grid__previous {
+    /*         grid-column: auto / span 5;*/
+    height: auto;
+    width: 5vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    left: 24px;
+  }
+
+  /* Body/ header************************************************************************************************************** */
+
+  body {
+    font-size: 14px; /*Navigationselemente = 14px*/
+    margin: 10px 24px 24px 24px;
+  }
+  .project-grid__header01 {
+    grid-column: auto / span 4;
+  }
+
+  .project-grid__header02 {
+    grid-column: 5 / span 4;
+  }
+
+  .project-grid__header03 {
+    grid-column: 9 / span 4;
+  }
+
+  .project-grid__title {
+    /*überschriften zum Projekt = 18px*/
+    /*OK*/
+    grid-column: 2 / span 10;
+
+    font-size: 18px;
+  }
+  /********************************************************************************************************************************************************/
+}
+.project-grid__hero {
+  grid-column: auto / span 12;
+}
+.project-grid__hero2 {
+  grid-column: auto / span 12;
+}
+.project-grid__hero3 {
+  grid-column: auto / span 12;
+}
+/********************************************************************************************************************************************************/
+
+.project-grid__nebeninfos {
+  /* nebeninfos = wie text*/
+  /*OK*/
+  grid-column: 3 / span 8;
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px; /* grösser als restliche titel weil es eine zahl ist*/
+  letter-spacing: 0.8px;
+  margin-top: 4px;
+}
+.project_grid__text {
+  /*lauftext/projektbeschrieb = 16px*/
+  /*OK*/
+  grid-column: 2 / span 10;
+
+  text-align: left;
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 44px;
+  letter-spacing: 0.3px;
+}
+/**********************************************************************************************************************************************************/
+
+.project-grid__detail {
+  grid-column: auto / span 12;
+}
+.project-grid__plakat {
+  grid-column: auto / span 12;
+}
+.project-grid__animation {
+  grid-column: auto / span 12;
+}
+/**********************************************************************************************************************************************************/
+
+.project-grid__inhalt01 {
+  grid-column: auto / span 12;
+}
+.project-grid__inhalt02 {
+  grid-column: auto / span 12;
+}
+.project-grid__inhalt03 {
+  grid-column: auto / span 12;
+}
+.project-grid__inhalt04 {
+  grid-column: auto / span 12;
+}
+.project-grid__inhalt05 {
+  grid-column: auto / span 12;
+}
+.project-grid__inhalt06 {
+  grid-column: auto / span 12;
+}
+.project-grid__inhalt07 {
+  grid-column: auto / span 12;
+}
+.project-grid__inhalt08 {
+  grid-column: auto / span 12;
+}
+.project-grid__inhalt09 {
+  grid-column: auto / span 12;
+}
+.project-grid__inhalt10 {
+  grid-column: auto / span 12;
+}
+/**********************************************************************************************************************************************************/
+
+.project-grid__su {
+  grid-column: auto / span 12;
+}
+.project-grid__process {
+  grid-column: 6 / span 2;
+
+  text-align: center;
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+/************************************************************************************************ ueber mich ********************************************/
+.project_grid__text-ich {
+  grid-column: 2 / span 10;
+
+  text-align: left;
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 44px;
+  letter-spacing: 0.3px;
+}
+
+/******************************************************************************************* SKILL sprache ********************************************/
+
+.project_grid__skill-s {
+  grid-column: 2 / span 3; /* Startet in Spalte 4, geht 3 Spalten weit (bis Spalte 7) */
+
+  position: static;
+  text-align: left;
+  font-size: 14px;
+  margin-top: 72px;
+  margin-bottom: 72px;
+  letter-spacing: 0.3px;
+  /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
+  align-self: start;
+}
+
+/* Das interne Grid für Label/Sterne bleibt unverändert */
+.skill-row-s {
+  display: grid;
+  grid-template-columns: 180px auto;
+  margin-bottom: 6px;
+  font-size: 14px;
+  /* Entfernen Sie die Zeilenzuweisungen hier, wenn sie noch drin sind */
+  position: static;
+}
+.label-s {
+  text-align: left;
+  position: static; /* ← Grid übernimmt */
+}
+
+.niveau {
+  text-align: left; /* Sterne beginnen links */
+  letter-spacing: 0.3px; /* Optional schöner Abstand */
+  font-family: "Playfair Display", serif;
+  position: static; /* ← Grid übernimmt */
+}
+
+/********************************************************************************************* SKILL Programme ********************************************/
+
+/* Er nimmt die Spalten 4 bis 6 (3 Spalten breit) ein. */
+.project_grid__skill {
+  grid-column: 4 / span 4; /* Startet in Spalte 4, geht 3 Spalten weit (bis Spalte 7) */
+
+  /* Entfernen Sie alle 'grid-row' Zuweisungen, damit das Grid den Fluss bestimmt */
+  position: static;
+  text-align: left;
+  font-size: 14px;
+  margin-top: 72px;
+  margin-bottom: 72px;
+  letter-spacing: 0.3px;
+  /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
+  align-self: start;
+}
+
+/* NEUE POSITION FÜR DEN PROGRAMME-BLOCK (RECHTS) */
+.project_grid__programme {
+  grid-column: 8 / span 3; /* Startet in Spalte 7 (direkt nach dem Skill-Block), geht 3 Spalten weit (bis Spalte 10) */
+
+  position: static;
+  text-align: left;
+  font-size: 14px;
+  margin-top: 72px;
+  margin-bottom: 72px;
+  letter-spacing: 0.3px;
+  /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
+  align-self: start;
+}
+
+/* Das interne Grid für Label/Sterne bleibt unverändert */
+.skill-row {
+  display: grid;
+  grid-template-columns: 190px auto;
+  margin-bottom: 6px;
+  font-size: 14px;
+  /* Entfernen Sie die Zeilenzuweisungen hier, wenn sie noch drin sind */
+  position: static;
+}
+.label {
+  text-align: left;
+  position: static; /* ← Grid übernimmt */
+}
+
+.stars {
+  text-align: left; /* Sterne beginnen links */
+  letter-spacing: 3px; /* Optional schöner Abstand */
+  font-family: monospace; /* Sterne exakt untereinander */
+  position: static; /* ← Grid übernimmt */
+}
+/**********************************************************************************************************************************************************/
+
+.swiper {
+  grid-column: auto / span 12;
+}
+
+.swiper {
+  height: calc(
+    (100vw - 48px) * 2 / 3
+  ); /* nciht pixel sonst immer gleich egal welcher bildschirm (3*2 = Bildformat / 2 --> Hälfte der Grösse */
+}
+/*
+.project-grid {
+  grid-template-areas:
+    "header01 header01 .  header02 header02 header02 header02 header02 header03 header03 header03 header03"
+    ". title title title title title title title title title title  ."
+    "hero hero hero hero hero hero hero hero hero hero hero hero"
+    ". . nebeninfos nebeninfos nebeninfos nebeninfos nebeninfos nebeninfos nebeninfos nebeninfos . ."
+    ". text text text text text text text text text text ."
+    "detail detail detail detail detail detail detail detail detail detail detail detail"
+    "hero2 hero2 hero2 hero2 hero2 hero2 hero2 hero2 hero2 hero2 hero2 hero2"
+    "hero3 hero3 hero3 hero3 hero3 hero3 hero3 hero3 hero3 hero3 hero3 hero3"
+    "plakat plakat plakat plakat plakat plakat plakat plakat plakat plakat plakat plakat "
+    "animation animation animation animation animation animation animation animation animation animation animation animation";
+}
+    */
+
+@media all and (min-width: 700px) {
+  /* ******************************************************************************************************************************************************/
+  /* Desktop */
+  /* *******************************************************************************************************************************************************/
+
+  .smartphone {
+    display: none;
+  }
+  body {
+    font-size: 16px;
+    margin: 10px 24px 24px 24px;
+  }
+  .project-grid__next,
+  .project-grid__previous {
+    position: static; /* ← Grid übernimmt */
+    grid-row: 700; /* irgendeine hohe Zeile, sie landen zusammen */
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    grid-row: 20;
+    margin-bottom: 48px;
+  }
+  .project-grid__previous {
+    grid-column: auto / span 3;
+    text-align: left;
+  }
+  .project-grid__next {
+    grid-column: 10 / span 3;
+    text-align: right;
+  }
+
+  /********************************************************************************************************************************************************/
+
+  .project-grid__header01 {
+    grid-column: auto / span 2;
+  }
+
+  .project-grid__header02 {
+    grid-column: 6 / span 2;
+  }
+
+  .project-grid__header03 {
+    grid-column: 10 / span 3;
+  }
+  .project-grid__title {
+    font-size: 24px;
+    grid-column: 4 / span 6;
+
+    /********************************************************************************************************************************************************/
+  }
+  .project-grid__hero {
+    grid-column: auto / span 12;
+  }
+  .project-grid__hero2 {
+    grid-column: auto / span 12;
+  }
+  .project-grid__hero3 {
+    grid-column: auto / span 12;
+  }
+  /**********************************************************************************************************************************************************/
+
+  .project-grid__nebeninfos {
+    grid-column: 5 / span 4;
+
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px; /* grösser als restliche titel weil es eine zahl ist*/
+    letter-spacing: 0.8px;
+    margin-top: 4px;
+  }
+
+  .project_grid__text {
+    grid-column: 4 / span 6;
+
+    text-align: center;
+    font-size: 24px;
+    margin-top: 60px;
+    margin-bottom: 64px;
+    letter-spacing: 0.3px;
+  }
+  /**********************************************************************************************************************************************************/
+
+  .project-grid__detail {
+    grid-column: auto / span 12;
+  }
+  .project-grid__plakat {
+    grid-column: auto / span 6;
+  }
+  .project-grid__animation {
+    grid-column: 7 / span 6;
+  }
+  /**********************************************************************************************************************************************************/
+
+  .project-grid__inhalt01 {
+    grid-column: auto / span 6;
+  }
+  .project-grid__inhalt02 {
+    grid-column: 7 / span 6;
+  }
+  .project-grid__inhalt03 {
+    grid-column: auto / span 6;
+  }
+  .project-grid__inhalt04 {
+    grid-column: 7 / span 6;
+  }
+  .project-grid__inhalt05 {
+    grid-column: auto / span 6;
+  }
+  .project-grid__inhalt06 {
+    grid-column: 7 / span 6;
+  }
+  .project-grid__inhalt07 {
+    grid-column: auto / span 6;
+  }
+  .project-grid__inhalt08 {
+    grid-column: 7 / span 6;
+  }
+  .project-grid__inhalt09 {
+    grid-column: auto / span 6;
+  }
+  .project-grid__inhalt10 {
+    grid-column: 7 / span 6;
+  }
+  /**********************************************************************************************************************************************************/
+
+  .project-grid__su {
+    grid-column: auto / span 12;
+  }
+  .project-grid__process {
+    grid-column: 6 / span 2;
+  }
+  /************************************************************************************************ ueber mich ********************************************/
+  .project_grid__text-ich {
+    grid-column: 4 / span 6;
+
+    text-align: center;
+    font-size: 24px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    letter-spacing: 0.3px;
+  }
+  /******************************************************************************************* SKILL sprache ********************************************/
+
+  .project_grid__skill-s {
+    grid-column: 4 / span 3; /* Startet in Spalte 4, geht 3 Spalten weit (bis Spalte 7) */
+
+    position: static;
+    text-align: left;
+    font-size: 16px;
+    margin-top: 72px;
+    margin-bottom: 72px;
+    letter-spacing: 0.3px;
+    /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
+    align-self: start;
+  }
+
+  /* Das interne Grid für Label/Sterne bleibt unverändert */
+  .skill-row-s {
+    display: grid;
+    grid-template-columns: 180px auto;
+    margin-bottom: 6px;
+    font-size: 16px;
+    /* Entfernen Sie die Zeilenzuweisungen hier, wenn sie noch drin sind */
+    position: static;
+  }
+  .label-s {
+    text-align: left;
+    position: static; /* ← Grid übernimmt */
+    grid-row: 700; /* irgendeine hohe Zeile, sie landen zusammen */
+  }
+
+  .niveau {
+    text-align: left; /* Sterne beginnen links */
+    letter-spacing: 0.3px; /* Optional schöner Abstand */
+    font-family: "Playfair Display", serif;
+    position: static; /* ← Grid übernimmt */
+    grid-row: 700; /* irgendeine hohe Zeile, sie landen zusammen */
+  }
+
+  /********************************************************************************************* SKILL Programme ********************************************/
+
+  /* Er nimmt die Spalten 4 bis 6 (3 Spalten breit) ein. */
+  .project_grid__skill {
+    grid-column: 4 / span 4; /* Startet in Spalte 4, geht 3 Spalten weit (bis Spalte 7) */
+
+    /* Entfernen Sie alle 'grid-row' Zuweisungen, damit das Grid den Fluss bestimmt */
+    position: static;
+    text-align: left;
+    font-size: 16px;
+    margin-top: 72px;
+    margin-bottom: 72px;
+    letter-spacing: 0.3px;
+    /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
+    align-self: start;
+  }
+
+  /* NEUE POSITION FÜR DEN PROGRAMME-BLOCK (RECHTS) */
+  .project_grid__programme {
+    grid-column: 8 / span 3; /* Startet in Spalte 7 (direkt nach dem Skill-Block), geht 3 Spalten weit (bis Spalte 10) */
+
+    position: static;
+    text-align: left;
+    font-size: 16px;
+    margin-top: 72px;
+    margin-bottom: 72px;
+    letter-spacing: 0.3px;
+    /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
+    align-self: start;
+  }
+
+  /* Das interne Grid für Label/Sterne bleibt unverändert */
+  .skill-row {
+    display: grid;
+    grid-template-columns: 190px auto;
+    margin-bottom: 6px;
+    font-size: 16px;
+    /* Entfernen Sie die Zeilenzuweisungen hier, wenn sie noch drin sind */
+    position: static;
+  }
+  .label {
+    text-align: left;
+    position: static; /* ← Grid übernimmt */
+    grid-row: 700; /* irgendeine hohe Zeile, sie landen zusammen */
+  }
+
+  .stars {
+    text-align: left; /* Sterne beginnen links */
+    letter-spacing: 3px; /* Optional schöner Abstand */
+    font-family: monospace; /* Sterne exakt untereinander */
+    position: static; /* ← Grid übernimmt */
+    grid-row: 700; /* irgendeine hohe Zeile, sie landen zusammen */
+  }
+}
+
+.swiper {
+  grid-column: auto / span 12;
+  margin-bottom: 48px;
+}
+.swiper {
+  height: calc(
+    100vw / 3 * 2 / 2
+  ); /* nciht pixel sonst immer gleich egal welcher bildschirm (3*2 = Bildformat / 2 --> Hälfte der Grösse */
+}
+
+/*
+  .project-grid__process-einzeln {
+    grid-area: pro1;
+  }
+  .project-grid__process {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  .project-grid__next {
+    grid-area: next;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    margin-top: 72px;
+    margin-bottom: 72px;
+  }
+  .project-grid__previous {
+    grid-area: previous;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    margin-top: 72px;
+    margin-bottom: 72px;
+  }
+  .swiper {
+    height: calc(
+      100vw / 3 * 2 / 2
+    ); /* nciht pixel sonst immer gleich egal welcher bildschirm (3*2 = Bildformat / 2 --> Hälfte der Grösse */
+
+/*
+  .project-grid {
+    grid-template-areas:
+ 
+      ". . . text text text text text text . . ."
+      "detail detail detail detail detail detail detail detail detail detail detail detail"
+      "hero2 hero2 hero2 hero2 hero2 hero2 hero2 hero2 hero2 hero2 hero2 hero2"
+      "hero3 hero3 hero3 hero3 hero3 hero3 hero3 hero3 hero3 hero3 hero3 hero3"
+      "plakat plakat plakat plakat plakat plakat animation animation animation animation animation animation"
+      "inhalt01 inhalt01 inhalt01 inhalt01 inhalt01 inhalt01 inhalt02 inhalt02 inhalt02 inhalt02 inhalt02 inhalt02"
+      "inhalt03 inhalt03 inhalt03 inhalt03 inhalt03 inhalt03 inhalt04 inhalt04 inhalt04 inhalt04 inhalt04 inhalt04 "
+      "inhalt05 inhalt05 inhalt05 inhalt05 inhalt05 inhalt05 inhalt06 inhalt06 inhalt06 inhalt06 inhalt06 inhalt06 "
+      "inhalt07 inhalt07 inhalt07 inhalt07 inhalt07 inhalt07 inhalt08 inhalt08 inhalt08 inhalt08 inhalt08 inhalt08 "
+      "inhalt09 inhalt09 inhalt09 inhalt09 inhalt09 inhalt09 inhalt10 inhalt10 inhalt10 inhalt10 inhalt10 inhalt10 "
+      "su su su su su su su su su su su su"
+      ". . . . . process process . . . . . "
+      "swiper swiper swiper swiper swiper swiper swiper swiper swiper swiper swiper swiper"
+      ". . . pro1 pro1 pro1 pro1 pro1 pro1 . . ."
+      "previous previous previous previous previous previous next next next next next next";
+  } */
