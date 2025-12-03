@@ -181,7 +181,13 @@ a {
   .project-grid__header02 {
     grid-column: 5 / span 4;
   }
-
+  .project-grid__header02-ich {
+    grid-column: 5 / span 4;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.8px;
+    display: block;
+  }
   .project-grid__header03 {
     grid-column: 9 / span 4;
   }
@@ -190,7 +196,11 @@ a {
     /*überschriften zum Projekt = 18px*/
     /*OK*/
     grid-column: 2 / span 10;
-
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    letter-spacing: 0.8px;
     font-size: 18px;
   }
   /********************************************************************************************************************************************************/
