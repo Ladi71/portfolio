@@ -292,19 +292,18 @@ a {
   text-align: left;
   font-size: 16px;
   margin-top: 40px;
-  margin-bottom: 44px;
+  margin-bottom: 72px;
   letter-spacing: 0.3px;
 }
 
 /******************************************************************************************* SKILL sprache ********************************************/
 
 .project_grid__skill-s {
-  grid-column: 2 / span 3; /* Startet in Spalte 4, geht 3 Spalten weit (bis Spalte 7) */
+  grid-column: 2 / span 10; /* Startet in Spalte 4, geht 3 Spalten weit (bis Spalte 7) */
 
   position: static;
   text-align: left;
   font-size: 14px;
-  margin-top: 72px;
   margin-bottom: 72px;
   letter-spacing: 0.3px;
   /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
@@ -336,7 +335,7 @@ a {
 
 /* Er nimmt die Spalten 4 bis 6 (3 Spalten breit) ein. */
 .project_grid__skill {
-  grid-column: 4 / span 4; /* Startet in Spalte 4, geht 3 Spalten weit (bis Spalte 7) */
+  grid-column: 2 / span 10; /* Startet in Spalte 4, geht 3 Spalten weit (bis Spalte 7) */
 
   /* Entfernen Sie alle 'grid-row' Zuweisungen, damit das Grid den Fluss bestimmt */
   position: static;
@@ -351,12 +350,11 @@ a {
 
 /* NEUE POSITION FÜR DEN PROGRAMME-BLOCK (RECHTS) */
 .project_grid__programme {
-  grid-column: 8 / span 3; /* Startet in Spalte 7 (direkt nach dem Skill-Block), geht 3 Spalten weit (bis Spalte 10) */
+  grid-column: 2 / span 10; /* Startet in Spalte 7 (direkt nach dem Skill-Block), geht 3 Spalten weit (bis Spalte 10) */
 
   position: static;
   text-align: left;
   font-size: 14px;
-  margin-top: 72px;
   margin-bottom: 72px;
   letter-spacing: 0.3px;
   /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
