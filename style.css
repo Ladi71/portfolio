@@ -388,6 +388,21 @@ a {
   position: static; /* ← Grid übernimmt */
 }
 /**********************************************************************************************************************************************************/
+.insta {
+  grid-column: 2 / span 2; /* Startet in Spalte 7 (direkt nach dem Skill-Block), geht 3 Spalten weit (bis Spalte 10) */
+  margin-top: 48px;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.8px;
+  display: block;
+}
+.mail {
+  grid-column: 2 / span 2; /* Startet in Spalte 7 (direkt nach dem Skill-Block), geht 3 Spalten weit (bis Spalte 10) */
+  text-align: left;
+  letter-spacing: 0.8px;
+  display: block;
+  margin-bottom: 72px;
+}
 
 .swiper {
   grid-column: auto / span 12;
