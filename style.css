@@ -388,12 +388,15 @@ a {
 .swiper {
   grid-column: auto / span 12;
 }
-
 .swiper {
+  height: calc((100vw - 48px) * 3 / 2);
+}
+
+/*.swiper {
   height: calc(
     (100vw - 48px) * 2 / 3
   ); /* nciht pixel sonst immer gleich egal welcher bildschirm (3*2 = Bildformat / 2 --> Hälfte der Grösse */
-}
+
 /*
 .project-grid {
   grid-template-areas:
