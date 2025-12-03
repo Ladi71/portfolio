@@ -573,7 +573,7 @@ a {
     text-align: left;
     font-size: 16px;
     margin-top: 72px;
-    margin-bottom: 72px;
+    margin-bottom: 96px;
     letter-spacing: 0.3px;
     /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
     align-self: start;
@@ -613,7 +613,7 @@ a {
     text-align: left;
     font-size: 16px;
     margin-top: 72px;
-    margin-bottom: 72px;
+    margin-bottom: 96px;
     letter-spacing: 0.3px;
     /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
     align-self: start;
@@ -627,7 +627,7 @@ a {
     text-align: left;
     font-size: 16px;
     margin-top: 72px;
-    margin-bottom: 72px;
+    margin-bottom: 96px;
     letter-spacing: 0.3px;
     /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
     align-self: start;
@@ -656,7 +656,21 @@ a {
     grid-row: 700; /* irgendeine hohe Zeile, sie landen zusammen */
   }
 }
-
+.insta {
+  grid-column: 6 / span 2; /* Startet in Spalte 7 (direkt nach dem Skill-Block), geht 3 Spalten weit (bis Spalte 10) */
+  margin-top: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.8px;
+  display: block;
+}
+.mail {
+  grid-column: 6 / span 2; /* Startet in Spalte 7 (direkt nach dem Skill-Block), geht 3 Spalten weit (bis Spalte 10) */
+  text-align: center;
+  letter-spacing: 0.8px;
+  display: block;
+  margin-bottom: 72px;
+}
 .swiper {
   grid-column: auto / span 12;
   margin-bottom: 48px;
