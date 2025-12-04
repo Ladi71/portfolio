@@ -5,7 +5,7 @@
 body {
   font-family: "Playfair Display", serif;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.3;
   color: white;
   background-color: black;
 }
@@ -29,7 +29,7 @@ header
   text-align: left;
   letter-spacing: 0.8px;
   display: block;
-  margin: 10px 0 24px 24px;
+  /*margin: 10px 0 24px 24px; */
 }
 
 .project-grid__header02 {
@@ -37,7 +37,7 @@ header
   text-align: center;
   letter-spacing: 0.8px;
   display: block;
-  margin: 10px 0 24px 0;
+  /* margin: 10px 0 24px 0; */
 }
 
 .project-grid__header03 {
@@ -45,7 +45,7 @@ header
   text-align: right;
   letter-spacing: 0.8px;
   display: block;
-  margin: 10px 24px 24px 0;
+  padding-right: 8px;
 }
 
 /* =======================================
@@ -54,13 +54,13 @@ header
 
 .project-grid {
   display: grid; /* ähnlcih wie flex */
-  padding: 0 8px 8px 8px 8px; /* rand rundum, 1 Zahl = rundum, 4 Zahlen --> im uhrzeigersinn   ränder oben, R, unten, L */
+  padding: 8px 8px 8px 8px; /* rand rundum, 1 Zahl = rundum, 4 Zahlen --> im uhrzeigersinn   ränder oben, R, unten, L */
   gap: 4px; /* Steg zwischen spalten */
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*1fr 1fr 1fr 1fr --> 4 Spalten --> immer 4 objekte in ""*/
   z-index: 999;
   position: relative;
   /* WICHTIG: Auf VH (Viewport Height) umgestellt für Responsivität */
-  height: 5vh;
+  /* height: 5vh; */
 }
 
 /* =======================================
@@ -245,6 +245,7 @@ canvas {
   }
   body {
     font-size: 14px; /*Navigationselemente = 14px*/
+    letter-spacing: 1px;
   }
   .project-grid__header01 {
     grid-column: auto / span 4;
@@ -267,6 +268,7 @@ canvas {
   }
   body {
     font-size: 16px;
+    letter-spacing: 1px;
   }
   .project-grid__header01 {
     grid-column: auto / span 4;
