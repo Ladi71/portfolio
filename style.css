@@ -431,6 +431,8 @@ a {
 }
 .swiper {
   height: calc((100vw - 48px) * 3 / 2);
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 @media all and (min-width: 700px) {
@@ -689,6 +691,8 @@ a {
   height: calc(
     100vw / 3 * 2 / 2
   ); /* nciht pixel sonst immer gleich egal welcher bildschirm (3*2 = Bildformat / 2 --> Hälfte der Grösse */
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 /*
