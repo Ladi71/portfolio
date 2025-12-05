@@ -8,6 +8,7 @@ body {
   line-height: 1.4;
   color: white;
   background-color: black;
+  margin: 0;
 }
 img {
   max-width: 100%;
@@ -84,7 +85,7 @@ a {
 
 .project-grid {
   display: grid; /* ähnlcih wie flex */
-  padding: 10px 8px 8px 8px; /* rand rundum, 1 Zahl = rundum, 4 Zahlen --> im uhrzeigersinn   ränder oben, R, unten, L */
+  padding: 18px 16px 16px 16px; /* rand rundum, 1 Zahl = rundum, 4 Zahlen --> im uhrzeigersinn   ränder oben, R, unten, L */
   gap: 4px; /* Steg zwischen spalten */
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*1fr 1fr 1fr 1fr --> 4 Spalten --> immer 4 objekte in ""*/
 }
@@ -103,9 +104,8 @@ a {
     ======================================= */
 /* Gib dem Swiper-Container eine Grösse */
 .swiper {
-  width: 100%;
-
-  /* border-radius: 8px;*/
+  margin: 0 -20px !important; /*überschrieben*/
+  width: calc(100% + 40px); /*breite ausrechenen*/
 }
 
 /* * DAS IST DIE WICHTIGE LÖSUNG:
@@ -137,8 +137,8 @@ a {
     display: none;
   }
   .smartphone {
-    display: block;
-    width: 200px; /* oder 32px oder was du willst */
+    /*display: block; */
+    /* width: 200px; /* oder 32px oder was du willst */
     height: auto;
   }
 
@@ -170,7 +170,7 @@ a {
     /*font size = body (14)*/
   }
 
-  /* Body/ header************************************************************************************************************** */
+  /* Body/ header********************************************************************* header, body ******************************** */
 
   body {
     font-size: 14px; /*Navigationselemente = 14px*/
@@ -181,7 +181,8 @@ a {
     text-transform: uppercase;
     text-align: left;
     letter-spacing: 0.8px;
-    display: block;
+
+    /* display: block; */
     /* margin: 10px 0 24px 24px; */
     /*font size = body (14)*/
   }
@@ -196,7 +197,7 @@ a {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.8px;
-    display: block;
+    /* display: block;*/
     /*font size = body (14)*/
   }
   .project-grid__header03 {
@@ -211,7 +212,7 @@ a {
 
     font-size: 18px;
   }
-  /********************************************************************************************************************************************************/
+  /********************************************************************************** hero **************************************************************/
 }
 .project-grid__hero {
   grid-column: auto / span 12;
@@ -222,7 +223,7 @@ a {
 .project-grid__hero3 {
   grid-column: auto / span 12;
 }
-/********************************************************************************************************************************************************/
+/*********************************************************************************** nebeninfos, text *****************************************************/
 
 .project-grid__nebeninfos {
   /* nebeninfos = wie text*/
@@ -246,7 +247,7 @@ a {
   margin-bottom: 56px;
   letter-spacing: 0.3px;
 }
-/**********************************************************************************************************************************************************/
+/********************************************************************** detail, plakat, animation *******************************************************/
 
 .project-grid__detail {
   grid-column: auto / span 12;
@@ -257,7 +258,7 @@ a {
 .project-grid__animation {
   grid-column: auto / span 12;
 }
-/**********************************************************************************************************************************************************/
+/********************************************************************************** Inhaltbilder ********************************************************/
 
 .project-grid__inhalt01 {
   grid-column: auto / span 12;
