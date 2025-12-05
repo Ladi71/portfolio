@@ -352,7 +352,7 @@ a {
 /* Das interne Grid für Label/Sterne bleibt unverändert */
 .skill-row-s {
   display: grid;
-  grid-template-columns: 80px auto;
+  grid-template-columns: 100px auto;
   margin-bottom: 6px;
   font-size: 14px; /*font size = body (14)*/
 
@@ -617,7 +617,7 @@ a {
   /* Das interne Grid für Label/Sterne bleibt unverändert */
   .skill-row-s {
     display: grid;
-    grid-template-columns: 90px auto;
+    grid-template-columns: 110px auto;
     margin-bottom: 6px;
     font-size: 16px; /*body font size (16)*/
     /* Entfernen Sie die Zeilenzuweisungen hier, wenn sie noch drin sind */
