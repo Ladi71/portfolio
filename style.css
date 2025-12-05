@@ -332,6 +332,8 @@ a {
   text-align: left;
   letter-spacing: 0.8px;
   display: block;
+  text-transform: uppercase;
+
   /*font size = body (14)*/
 }
 
@@ -429,11 +431,13 @@ a {
 
 .swiper {
   grid-column: auto / span 12;
+  margin-bottom: 112px;
 }
 .swiper {
   height: calc((100vw - 48px) * 3 / 2);
   margin-left: -8px;
   margin-right: -8px;
+  margin-bottom: 112px;
 }
 
 @media all and (min-width: 700px) {
@@ -476,7 +480,7 @@ a {
   }
 
   .project-grid__header02 {
-    grid-column: 6 / span 2;
+    grid-column: 5 / span 4;
   }
 
   .project-grid__header03 {
@@ -686,7 +690,6 @@ a {
 
 .swiper {
   grid-column: auto / span 12;
-  margin-bottom: 56px;
 }
 .swiper {
   height: calc(
@@ -694,6 +697,7 @@ a {
   ); /* nciht pixel sonst immer gleich egal welcher bildschirm (3*2 = Bildformat / 2 --> Hälfte der Grösse */
   margin-left: -8px;
   margin-right: -8px;
+  margin-bottom: 75px !important;
 }
 
 /*
