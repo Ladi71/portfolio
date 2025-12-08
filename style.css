@@ -442,6 +442,265 @@ a {
 
 @media all and (min-width: 731px) {
   /* ******************************************************************************************************************************************************/
+  /* Tablet o.Ä. */
+  /* *******************************************************************************************************************************************************/
+  /* *******************************************************************************************************************************************************/
+
+  .smartphone {
+    display: none;
+  }
+  body {
+    font-size: 16px;
+    /* margin: 10px 24px 24px 24px; */
+    letter-spacing: 1px;
+  }
+  .project-grid__next,
+  .project-grid__previous {
+    position: static; /* ← Grid übernimmt */
+    grid-row: 700; /* irgendeine hohe Zeile, sie landen zusammen */
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    grid-row: 20;
+    margin-bottom: 112px;
+  }
+  .project-grid__previous {
+    grid-column: auto / span 3;
+    text-align: left;
+  }
+  .project-grid__next {
+    grid-column: 10 / span 3;
+    text-align: right;
+  }
+
+  /********************************************************************************************************************************************************/
+
+  .project-grid__header01 {
+    grid-column: auto / span 2;
+  }
+
+  .project-grid__header02 {
+    grid-column: 5 / span 4;
+  }
+
+  .project-grid__header03 {
+    grid-column: 10 / span 3;
+  }
+  .project-grid__title {
+    font-size: 24px;
+    grid-column: 4 / span 6;
+
+    /********************************************************************************************************************************************************/
+  }
+  .project-grid__hero {
+    grid-column: auto / span 12;
+  }
+  .project-grid__hero2 {
+    grid-column: auto / span 12;
+  }
+  .project-grid__hero3 {
+    grid-column: auto / span 12;
+  }
+  /**********************************************************************************************************************************************************/
+
+  .project-grid__nebeninfos {
+    grid-column: auto / span 12;
+
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.8px;
+    /*body font size (16)*/
+  }
+
+  .project_grid__text {
+    grid-column: 3 / span 8;
+
+    text-align: center;
+    font-size: 24px;
+    margin-top: 36px;
+    margin-bottom: 56px;
+    letter-spacing: 0.3px;
+  }
+  /**********************************************************************************************************************************************************/
+
+  .project-grid__detail {
+    grid-column: auto / span 12;
+  }
+  .project-grid__plakat {
+    grid-column: auto / span 6;
+  }
+  .project-grid__animation {
+    grid-column: 7 / span 6;
+  }
+  /**********************************************************************************************************************************************************/
+
+  .project-grid__inhalt01 {
+    grid-column: auto / span 6;
+  }
+  .project-grid__inhalt02 {
+    grid-column: 7 / span 6;
+  }
+  .project-grid__inhalt03 {
+    grid-column: auto / span 6;
+  }
+  .project-grid__inhalt04 {
+    grid-column: 7 / span 6;
+  }
+  .project-grid__inhalt05 {
+    grid-column: auto / span 6;
+  }
+  .project-grid__inhalt06 {
+    grid-column: 7 / span 6;
+  }
+  .project-grid__inhalt07 {
+    grid-column: auto / span 6;
+  }
+  .project-grid__inhalt08 {
+    grid-column: 7 / span 6;
+  }
+  .project-grid__inhalt09 {
+    grid-column: auto / span 6;
+  }
+  .project-grid__inhalt10 {
+    grid-column: 7 / span 6;
+  }
+  /**********************************************************************************************************************************************************/
+
+  .project-grid__su {
+    grid-column: auto / span 12;
+  }
+  .project-grid__process {
+    grid-column: 6 / span 2;
+    /*body font size (16)*/
+  }
+  /************************************************************************************************ ueber mich ********************************************/
+  .project_grid__text-ich {
+    grid-column: 3 / span 8;
+
+    text-align: center;
+    font-size: 24px;
+    margin-top: 56px;
+    margin-bottom: 56px;
+
+    letter-spacing: 0.3px;
+  }
+  /********************************************************************************************* insta/mail ********************************************/
+
+  .insta {
+    grid-column: 6 / span 2; /* Startet in Spalte 7 (direkt nach dem Skill-Block), geht 3 Spalten weit (bis Spalte 10) */
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.8px;
+    display: block;
+    margin-bottom: 112px;
+
+    /*body font size (16)*/
+  }
+  .mail {
+    grid-column: 5 / span 4; /* Startet in Spalte 5 (direkt nach dem Skill-Block), geht 3 Spalten weit (bis Spalte 10) */
+    text-align: center;
+    letter-spacing: 0.8px;
+    display: block;
+
+    /*body font size (16)*/
+  }
+  /******************************************************************************************* SKILL sprache ********************************************/
+
+  .project_grid__skill-s {
+    grid-column: 3 / span 2; /* Startet in Spalte 4, geht 3 Spalten weit (bis Spalte 7) */
+
+    position: static;
+    text-align: left;
+    font-size: 16px; /*body font size (16)*/
+
+    margin-bottom: 56px;
+    letter-spacing: 0.3px;
+    /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
+    align-self: start;
+  }
+
+  /* Das interne Grid für Label/Sterne bleibt unverändert */
+  .skill-row-s {
+    display: grid;
+    grid-template-columns: 110px auto;
+    margin-bottom: 6px;
+    font-size: 16px; /*body font size (16)*/
+    /* Entfernen Sie die Zeilenzuweisungen hier, wenn sie noch drin sind */
+    position: static;
+  }
+  .label-s {
+    text-align: left;
+    position: static; /* ← Grid übernimmt */
+    grid-row: 700; /* irgendeine hohe Zeile, sie landen zusammen */
+  }
+
+  .niveau {
+    text-align: left; /* Sterne beginnen links */
+    letter-spacing: 0.3px; /* Optional schöner Abstand */
+    font-family: "Playfair Display", serif;
+    position: static; /* ← Grid übernimmt */
+    grid-row: 700; /* irgendeine hohe Zeile, sie landen zusammen */
+  }
+
+  /********************************************************************************************* SKILL Programme ********************************************/
+
+  /* Er nimmt die Spalten 4 bis 6 (3 Spalten breit) ein. */
+  .project_grid__skill {
+    grid-column: 4 / span 4; /* Startet in Spalte 4, geht 3 Spalten weit (bis Spalte 7) */
+
+    /* Entfernen Sie alle 'grid-row' Zuweisungen, damit das Grid den Fluss bestimmt */
+    position: static;
+    text-align: left;
+    font-size: 16px; /*body font size (16)*/
+
+    margin-bottom: 56px;
+    letter-spacing: 0.3px;
+    /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
+    align-self: start;
+  }
+
+  /* NEUE POSITION FÜR DEN PROGRAMME-BLOCK (RECHTS) */
+  .project_grid__programme {
+    grid-column: 9 / span 3; /* Startet in Spalte 7 (direkt nach dem Skill-Block), geht 3 Spalten weit (bis Spalte 10) */
+
+    position: static;
+    text-align: left;
+    font-size: 16px; /*body font size (16)*/
+
+    margin-bottom: 56px;
+    letter-spacing: 0.3px;
+    /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
+    align-self: start;
+  }
+
+  /* Das interne Grid für Label/Sterne bleibt unverändert 
+    .skill-row {
+      display: grid;
+      grid-template-columns: 190px auto;
+      margin-bottom: 6px;
+      font-size: 16px; /*body font size (16)d
+      position: static;
+    }*/
+  .label {
+    text-align: left;
+    position: static; /* ← Grid übernimmt */
+    grid-row: 700; /* irgendeine hohe Zeile, sie landen zusammen */
+  }
+}
+
+.swiper {
+  grid-column: auto / span 12;
+}
+.swiper {
+  height: calc(
+    100vw / 3 * 2 / 2
+  ); /* nciht pixel sonst immer gleich egal welcher bildschirm (3*2 = Bildformat / 2 --> Hälfte der Grösse */
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 75px !important;
+}
+@media all and (min-width: 1000px) {
+  /* ******************************************************************************************************************************************************/
   /* Desktop */
   /* *******************************************************************************************************************************************************/
   /* *******************************************************************************************************************************************************/
