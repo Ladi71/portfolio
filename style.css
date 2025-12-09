@@ -141,6 +141,14 @@ a {
     /* width: 200px; /* oder 32px oder was du willst */
     height: auto;
   }
+  .project-grid__impressum {
+    margin-top: 112px;
+    grid-column: 1 / span 12;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 50%;
+  }
 
   .project-grid__next {
     /* grid-column: 9 / span 4; */
@@ -346,7 +354,6 @@ a {
   text-align: left;
   font-size: 14px; /*font size = body (14)*/
 
-  margin-bottom: 56px;
   letter-spacing: 0.3px;
   /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
   align-self: start;
@@ -386,7 +393,6 @@ a {
   font-size: 14px; /*font size = body (14)*/
 
   margin-top: 56px;
-  margin-bottom: 56px;
   letter-spacing: 0.3px;
   /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
   align-self: start;
@@ -400,7 +406,6 @@ a {
   text-align: left;
   font-size: 14px; /*font size = body (14)*/
 
-  margin-bottom: 56px;
   letter-spacing: 0.3px;
   /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
   align-self: start;
@@ -453,6 +458,15 @@ a {
     font-size: 16px;
     /* margin: 10px 24px 24px 24px; */
     letter-spacing: 1px;
+  }
+  .project-grid__impressum {
+    margin-top: 112px;
+    margin-bottom: 56px;
+    grid-column: 1 / span 12;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 50%;
   }
   .project-grid__next,
   .project-grid__previous {
@@ -613,7 +627,6 @@ a {
     text-align: left;
     font-size: 16px; /*body font size (16)*/
 
-    margin-bottom: 56px;
     letter-spacing: 0.3px;
     /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
     align-self: start;
@@ -653,7 +666,6 @@ a {
     text-align: left;
     font-size: 16px; /*body font size (16)*/
 
-    margin-bottom: 56px;
     letter-spacing: 0.3px;
     /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
     align-self: start;
@@ -667,7 +679,6 @@ a {
     text-align: left;
     font-size: 16px; /*body font size (16)*/
 
-    margin-bottom: 56px;
     letter-spacing: 0.3px;
     /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
     align-self: start;
@@ -712,6 +723,15 @@ a {
     font-size: 16px;
     /* margin: 10px 24px 24px 24px; */
     letter-spacing: 1px;
+  }
+  .project-grid__impressum {
+    margin-top: 112px;
+    margin-bottom: 56px;
+    grid-column: 1 / span 12;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 50%;
   }
   .project-grid__next,
   .project-grid__previous {
@@ -872,7 +892,6 @@ a {
     text-align: left;
     font-size: 16px; /*body font size (16)*/
 
-    margin-bottom: 56px;
     letter-spacing: 0.3px;
     /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
     align-self: start;
@@ -912,7 +931,6 @@ a {
     text-align: left;
     font-size: 16px; /*body font size (16)*/
 
-    margin-bottom: 56px;
     letter-spacing: 0.3px;
     /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
     align-self: start;
@@ -926,7 +944,6 @@ a {
     text-align: left;
     font-size: 16px; /*body font size (16)*/
 
-    margin-bottom: 56px;
     letter-spacing: 0.3px;
     /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
     align-self: start;
