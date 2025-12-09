@@ -143,9 +143,9 @@ a {
   }
   .project-grid__impressum {
     margin-top: 112px;
-    grid-column: 1 / span 12;
+    grid-column: 2 / span 10;
     font-size: 14px;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     opacity: 50%;
   }
@@ -353,6 +353,7 @@ a {
   position: static;
   text-align: left;
   font-size: 14px; /*font size = body (14)*/
+  margin-bottom: 56px;
 
   letter-spacing: 0.3px;
   /* Damit der Text nicht in der Mitte der Zelle hängt, sondern oben ausgerichtet wird */
