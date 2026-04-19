@@ -271,7 +271,7 @@ a {
   /* FÜR ANIMATION BEI BUNBO --> WEBSEITE */
   grid-column: auto / span 12;
   width: 100%;
-  height: 100dvh; /* DAS ist der wichtigste Fix dvh --> sorgt dafür das version auf handy + tablet stimmt*/
+  height: 100%; /* DAS ist der wichtigste Fix dvh --> sorgt dafür das version auf handy + tablet stimmt*/
   overflow: hidden;
 }
 .project-grid__animation-hero video {
@@ -566,7 +566,7 @@ a {
     /* FÜR ANIMATION BEI BUNBO --> WEBSEITE */
     grid-column: auto / span 12;
     width: 100%;
-    height: 100dvh; /* DAS ist der wichtigste Fix */
+    height: 100%; /* DAS ist der wichtigste Fix */
     overflow: hidden;
   }
   .project-grid__animation-hero video {
@@ -845,7 +845,7 @@ a {
     /* FÜR ANIMATION BEI BUNBO --> WEBSEITE */
     grid-column: auto / span 12;
     width: 100%;
-    height: 100dvh; /* DAS ist der wichtigste Fix */
+    height: 100vh; /* DAS ist der wichtigste Fix */
     overflow: hidden;
   }
   .project-grid__animation-hero video {
