@@ -845,7 +845,7 @@ a {
     /* FÜR ANIMATION BEI BUNBO --> WEBSEITE */
     grid-column: auto / span 12;
     width: 100%;
-    height: 100vh; /* DAS ist der wichtigste Fix */
+    height: 100%; /* DAS ist der wichtigste Fix */
     overflow: hidden;
   }
   .project-grid__animation-hero video {
