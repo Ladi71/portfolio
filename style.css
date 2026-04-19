@@ -813,6 +813,20 @@ a {
   .project-grid__animation {
     grid-column: 7 / span 6;
   }
+  .project-grid__animation-hero {
+    /* FÜR ANIMATION BEI BUNBO --> WEBSEITE */
+    grid-column: auto / span 12;
+    width: 100%;
+    height: 100vh; /* DAS ist der wichtigste Fix */
+    overflow: hidden;
+  }
+  .project-grid__animation-hero video {
+    /* FÜR ANIMATION BEI BUNBO --> WEBSEITE */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
   /**********************************************************************************************************************************************************/
 
   .project-grid__inhalt01 {

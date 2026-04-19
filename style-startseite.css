@@ -130,7 +130,7 @@ body {
 
 .illustration {
   position: absolute;
-  left: 36.8%;
+  left: 33%; /*   left: 36.8%; */
   top: 74.6%;
   width: 18vw;
   filter: grayscale(1);
@@ -154,7 +154,7 @@ body {
 
 .corporate {
   position: absolute;
-  left: 69%;
+  left: 80%; /*  left: 69%;*/
   top: 72.4%;
   width: 16vw;
   filter: grayscale(1);
@@ -222,6 +222,18 @@ body {
   filter: grayscale(1);
 }
 .musikplakat:hover {
+  filter: grayscale(0);
+}
+/* bunbo  ---------------------------------------------------------------------------------------------------------------------*/
+
+.bunbo {
+  position: absolute;
+  left: 56%;
+  top: 74.6%;
+  width: 15vw;
+  filter: grayscale(1);
+}
+.bunbo:hover {
   filter: grayscale(0);
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
